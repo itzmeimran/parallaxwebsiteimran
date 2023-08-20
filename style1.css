@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,900;1,300;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.wrapper {
+    height: 100vh;
+    perspective: 10px;
+    overflow-x: hidden;
+
+}
+
+.container {
+    display: flex;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
+
+.background {
+    transform: translateZ(-40px) scale(5.1);
+
+}
+
+.foreground {
+    transform: translateZ(-20px) scale(3);
+}
+
+.foreground,
+.background {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.container>h1 {
+    position: absolute;
+    z-index: 1;
+    font-size: 7rem;
+    color: white;
+    top: 5rem;
+    left: 15%;
+    letter-spacing: 10px;
+    font-family: Poppins;
+
+}
+
+section {
+    color: black;
+    padding: 5rem 0;
+    background-color: #AEE2FF;
+    min-width: 100vw;
+
+}
+
+section>h1 {
+    text-shadow: 2px 2px 1px gray;
+}
+
+.bg {
+    height: 100%;
+}
+
+.bg1 {
+    background-image: url('/shimla.jpg');
+
+}
+
+.bg2 {
+    background-image: url('/manali.jpg');
+
+}
+
+.bg3 {
+    background-image: url('/ooty.jpg');
+
+}
+
+.bg4 {
+    background-image: url('/goa.jpg');
+
+}
+
+.bg5 {
+    background-image: url('/kerala.jpg');
+
+}
+
+.bg6 {
+    background-image: url('/tajmahal.jpg');
+
+}
+
+
+.sectionheading {
+    font-size: 5rem;
+    padding: 0 10rem;
+}
+
+.bg {
+    position: relative;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    width: 100%;
+}
+
+.secheading {
+    position: absolute;
+    padding: 0rem 3rem;
+    font-size: 3REM;
+    display: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateX(-50%);
+    color: black;
+    background-color: white;
+}
+
+.text {
+    padding: 5rem 10rem;
+    font-size: 1.2rem;
+    color: #301E67;
+    min-width: 100vw;
+}
+
+
+/* Mobile view - min-width:320px  max-width: 480px
+Tablet view - min-width:481px  max-width: 768px 
+Small screens, laptops – 769px — 1024px.
+Desktops, large screens – 1025px — 1200px. */
+
+@media only screen and (min-width:320px) and (max-width:480px) {
+    .container h1 {
+        font-size: 1.2rem;
+
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    section {
+        width: 100%;
+    }
+
+    .sectionheading {
+        font-size: 2rem;
+        min-width: 100vw;
+    }
+
+    section>p {
+        width: 100%;
+    }
+
+    .text {
+        padding: .5rem 2rem;
+    }
+
+    .secheading {
+        font-size: 1.5rem;
+    }
+
+}
+
+
+@media only screen and (min-width:481px) and (max-width:768px) {
+    .container h1 {
+        font-size: 3rem;
+
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .sectionheading {
+        font-size: 2rem;
+        min-width: 100vw;
+    }
+
+    .text {
+        padding: .5rem 2rem;
+    }
+
+    section {
+        width: 100%;
+    }
+
+    section>p {
+        width: 100%;
+    }
+
+    .secheading {
+        font-size: 2rem;
+    }
+}
